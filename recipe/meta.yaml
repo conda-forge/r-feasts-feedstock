@@ -1,4 +1,4 @@
-{% set version = "0.1.2" %}
+{% set version = "0.1.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/feasts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/feasts/feasts_{{ version }}.tar.gz
-  sha256: fabd9f4ad50644b8cb44fb9f9d0784f4c2dc9e125c64ff8441fe1bf85a50398d
+  sha256: 4be90c0cc96c889c8baa49e9831394d83fe07eeb7860eb8ded2ca505fde3df99
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -52,12 +52,10 @@ test:
 about:
   home: http://feasts.tidyverts.org/
   license: GPL-3
-  summary: 'Provides a collection of features, decompositions, statistical summaries and graphics
-    functions for the analysing tidy time series data. The package name ''feasts'' is
-    an acronym comprising of its key features:  Feature Extraction And Statistics for
-    Time Series.'
+  summary: "Provides a collection of features, decompositions, statistical summaries and graphics functions for the analysing tidy time series data. The package name\
+    \ 'feasts' is an acronym comprising of its key features:  Feature Extraction And Statistics for Time Series."
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
