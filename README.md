@@ -5,11 +5,9 @@ Home: http://feasts.tidyverts.org/, https://github.com/tidyverts/feasts/
 
 Package license: GPL-3
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-feasts-feedstock/blob/master/LICENSE.txt)
 
 Summary: Provides a collection of features, decomposition methods, statistical summaries and graphics functions for the analysing tidy time series data. The package name 'feasts' is an acronym comprising of its key features: Feature Extraction And Statistics for Time Series.
-
-
 
 Current build status
 ====================
