@@ -1,4 +1,4 @@
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/feasts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/feasts/feasts_{{ version }}.tar.gz
-  sha256: d6b4b58a34a0f5499c57701b913182df3f3ab7d5803b34985968ff9555eaa9a1
+  sha256: 657c7f4f1aed3f7d0896665b6d2572320ae41c9b12b2c94d39b38057534349b1
 
 build:
   merge_build_host: true  # [win]
