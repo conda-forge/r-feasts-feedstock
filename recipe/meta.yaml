@@ -1,4 +1,4 @@
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/feasts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/feasts/feasts_{{ version }}.tar.gz
-  sha256: d6b4b58a34a0f5499c57701b913182df3f3ab7d5803b34985968ff9555eaa9a1
+  sha256: 657c7f4f1aed3f7d0896665b6d2572320ae41c9b12b2c94d39b38057534349b1
 
 build:
   merge_build_host: true  # [win]
@@ -25,29 +25,31 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-dplyr >=0.8.0
-    - r-fabletools >=0.1.2
+    - r-dplyr >=1.0.0
+    - r-fabletools >=0.2.0
     - r-ggplot2 >=3.0.0
+    - r-lifecycle
     - r-lubridate
     - r-rlang >=0.2.0
     - r-scales >=1.1.0
     - r-slider
     - r-tibble >=1.4.1
     - r-tidyr >=0.8.3
-    - r-tsibble >=0.8.0
+    - r-tsibble >=0.9.0
     - r-vctrs
   run:
     - r-base
-    - r-dplyr >=0.8.0
-    - r-fabletools >=0.1.2
+    - r-dplyr >=1.0.0
+    - r-fabletools >=0.2.0
     - r-ggplot2 >=3.0.0
+    - r-lifecycle
     - r-lubridate
     - r-rlang >=0.2.0
     - r-scales >=1.1.0
     - r-slider
     - r-tibble >=1.4.1
     - r-tidyr >=0.8.3
-    - r-tsibble >=0.8.0
+    - r-tsibble >=0.9.0
     - r-vctrs
 
 test:
@@ -57,7 +59,7 @@ test:
 
 about:
   home: http://feasts.tidyverts.org/, https://github.com/tidyverts/feasts/
-  license: GPL-3
+  license: GPL-3.0-only
   summary: "Provides a collection of features, decomposition methods, statistical summaries and graphics functions for the analysing tidy time series data. The package name 'feasts' is an acronym comprising of its key features: Feature Extraction And Statistics for Time Series."
   license_family: GPL3
   license_file:
