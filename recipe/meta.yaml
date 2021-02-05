@@ -25,29 +25,31 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-dplyr >=0.8.0
-    - r-fabletools >=0.1.2
+    - r-dplyr >=1.0.0
+    - r-fabletools >=0.2.0
     - r-ggplot2 >=3.0.0
+    - r-lifecycle
     - r-lubridate
     - r-rlang >=0.2.0
     - r-scales >=1.1.0
     - r-slider
     - r-tibble >=1.4.1
     - r-tidyr >=0.8.3
-    - r-tsibble >=0.8.0
+    - r-tsibble >=0.9.0
     - r-vctrs
   run:
     - r-base
-    - r-dplyr >=0.8.0
-    - r-fabletools >=0.1.2
+    - r-dplyr >=1.0.0
+    - r-fabletools >=0.2.0
     - r-ggplot2 >=3.0.0
+    - r-lifecycle
     - r-lubridate
     - r-rlang >=0.2.0
     - r-scales >=1.1.0
     - r-slider
     - r-tibble >=1.4.1
     - r-tidyr >=0.8.3
-    - r-tsibble >=0.8.0
+    - r-tsibble >=0.9.0
     - r-vctrs
 
 test:
