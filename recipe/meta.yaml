@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/feasts_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/feasts/feasts_{{ version }}.tar.gz
-  sha256: d991ac332074905eb9a0f9831a9659f63d68f9974fc2ac5c8f0f01c87be08663
+  sha256: e35632b59151ed9b06c2807417a59cefb575913db87df197053689bbcbd3bea3
 
 build:
   number: 0
