@@ -17,40 +17,43 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-dplyr >=1.0.0
     - r-fabletools >=0.3.1
     - r-ggplot2 >=3.0.0
+    - r-ggtime
     - r-lifecycle
     - r-lubridate
     - r-rlang >=0.2.0
-    - r-scales >=1.1.0
     - r-slider
     - r-tibble >=1.4.1
     - r-tidyr >=0.8.3
     - r-tsibble >=0.9.0
     - r-vctrs
-    - r-gtable
   run:
     - r-base
     - r-dplyr >=1.0.0
     - r-fabletools >=0.3.1
     - r-ggplot2 >=3.0.0
+    - r-ggtime
     - r-lifecycle
     - r-lubridate
     - r-rlang >=0.2.0
-    - r-scales >=1.1.0
     - r-slider
     - r-tibble >=1.4.1
     - r-tidyr >=0.8.3
     - r-tsibble >=0.9.0
     - r-vctrs
-    - r-gtable
 
 test:
   commands:
